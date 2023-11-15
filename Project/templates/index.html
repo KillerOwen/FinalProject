@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Web-Based Audio Player</h1>
+  <audio id="audio-player" controls>
+    <source src="" type="audio/mpeg">
+  </audio>
+  <br>
+  <button id="shuffle-button">Shuffle</button>
+  <button id="queue-button">Queue</button>
+  <button id="next-button">Next Song</button> 
+  <button id="prev-button">Previous Song</button>
+  <div id="current-song"></div>
+
+  <div id="song-list">
+    <h2>Song List:</h2>
+    <ul id="list-of-songs"></ul>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
